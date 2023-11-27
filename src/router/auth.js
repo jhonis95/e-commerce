@@ -6,7 +6,8 @@ router.use(function timeLog(req, res, next) {
     next();
   });
   // define the home page route
-  router.get('/admin', async function(req, res) {
+  router.get('/', async function(req, res) {
     res.render('../src/views/public/login.ejs');
+
   });
   module.exports = router;

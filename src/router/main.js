@@ -4,7 +4,7 @@ const router = express.Router();
 const user = {
   firstName: 'Tim',
   lastName: 'Cook',
-  admin: true,
+  admin: false,
 }
 
 // middleware that is specific to this router
@@ -14,7 +14,7 @@ router.use(function timeLog(req, res, next) {
   });
   // define the home page route
   router.get('/', function(req, res) {
-    res.render('../src/views/dashboard/index.ejs', {
+    res.render('../src/views/public/index.ejs', {
       user
     });
   });

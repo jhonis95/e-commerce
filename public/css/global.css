@@ -1,0 +1,36 @@
+/* font style */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Urbanist&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+
+:root {
+    /* text font size */
+    /* desktop */
+    --text-xs:0.625rem; /*10px*/
+    --text-s:0.875rem; /*14px best for mobile*/ 
+    --text-m:1rem; /*16px*/
+    --text-l:1.125rem; /*18px best for desktop*/
+    --text-xl:1.5rem; /*24px*/
+
+    --headings-s:1.875rem; /*30px for subheadings*/
+    --headings-m:2.25rem; /*36px*/
+    --headings-l:3rem; /*48px*/
+
+    --title-s:3.75rem;/*60px*/
+    --title-m:4.5rem;/*72px*/
+    --title-l:5.438rem;/*84px*/
+
+    /* mobile */
+    --text-mobile-s:var(--text-xs)/*10px*/
+    --text-mobile-m:var(--text-s)/*14px best for mobile*/
+    --text-mobile-l:var(--text-m)/*16px*/
+
+    --headings-mobile-s:var(--text-l);/*18px for subheadings*/
+    --headings-mobile-m:1.313rem;/*21px*/
+    --headings-mobile-l:var(--text-xl)/*24px*/;
+
+    --title-mobile-s:var(--text-xl);/*24px*/
+    --title-mobile-m:var(--headings-s);/*30px*/
+    --title-mobile-l:var(--headings-m);/*36px*/
+  }

@@ -4,13 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/animations.css">
     <title>Login in</title>
 </head>
-<body>
-    <h1>Login page</h1>
-    <h1>Hi, I am <%= user.firstName  %></h1>
-    <% if (user.admin) { %>
-        <p>Let me tell you a secret: <b>I am an admin</b></p>
-    <% } %>
+<body class="login_page">
+    <h1 id="test">Login page</h1>
+    <form action="" method="post">
+        <img src="" alt="logo">
+        <div class="inputs_container">
+            <label for="name">Empresa</label>
+            <input type="text" name="name" id="login_input_name" placeholder="ID">
+        </div>
+        <div class="inputs_container">
+            <label for="password">Senha</label>
+            <input type="password" name="password" id="login_input_password" placeholder="Password">
+        </div>
+        <button type="submit">Login</button>
+
+    </form>
+    <div class="square rotate-center"></div>
 </body>
+
 </html>
