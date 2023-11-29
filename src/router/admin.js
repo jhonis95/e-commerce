@@ -7,7 +7,7 @@ router.use(function timeLog(req, res, next) {
     next();
   });
   // define the home page route
-  router.get('/', function(req, res) {
+  router.get('/', (req, res)=> {
     res.render('../src/views/dashboard/index.ejs');
   });
   module.exports = router;
