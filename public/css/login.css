@@ -1,8 +1,6 @@
 .login_page{
     display:flex;
     flex-direction: column;
-    /* align-items: center;
-    justify-content: space-evenly; */
     place-items: center;
     height: 100vh;
 }
@@ -21,7 +19,7 @@ label{
 }
 input{
     font-family: 'Poppins';
-    padding: 16px;
+    padding: 8px 16px;
     font-size: var(--text-l);
 }
 img{
@@ -31,7 +29,7 @@ h1{
     font-family: 'Rubik Mono One';
 }
 button{
-    padding: 16px;
+    padding: 10px 24px;
     width: 150px;
     margin: 0% auto;
     font-size: var(--text-l);
