@@ -8,6 +8,7 @@ passport.serializeUser(function(user, cb) {
   process.nextTick(function() {
     return cb(null, {
       username: user.name,
+      test:'testando opcoes'
     });
   });
 });
@@ -29,13 +30,20 @@ passport.use(new LocalStrategy(function verify(username, password, cb) {
   // authUser(username,password)
 }));
 
+const data={
+  siteName:'Login in',
+  headLinks:[
+    '<link rel="stylesheet" href="css/login.css">'
+  ]
+}
+
 router.use(function timeLog(req, res, next) {
   console.log('Time: ', Date.now());
   next();
 });
 // define the home page route
 router.get('/',(req, res)=> {
-  res.render('../src/views/public/login.ejs');
+  res.render('../src/views/public/login.ejs',data);
 });
 router.post('/',passport.authenticate('local', {
   successRedirect: "/admin",

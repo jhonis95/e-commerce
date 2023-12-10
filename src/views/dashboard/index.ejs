@@ -8,5 +8,8 @@
 </head>
 <body>
     <h1>Dashboad</h1>
+    <%if(user){%>
+        <h3>bem vindo <%= user.username%></h3>
+    <%}%>
 </body>
 </html>
