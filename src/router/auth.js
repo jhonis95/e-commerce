@@ -43,7 +43,7 @@ router.use(function timeLog(req, res, next) {
 });
 // define the home page route
 router.get('/',(req, res)=> {
-  res.render('../src/views/public/login.ejs',data);
+  res.render('../src/views/pages/login.ejs',data);
 });
 router.post('/',passport.authenticate('local', {
   successRedirect: "/admin",

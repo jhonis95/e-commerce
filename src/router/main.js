@@ -14,7 +14,7 @@ router.use(function timeLog(req, res, next) {
   });
   // define the home page route
   router.get('/', function(req, res) {
-    res.render('../src/views/public/index.ejs',data);
+    res.render('../src/views/pages/index.ejs',data);
   });
   
   module.exports = router;

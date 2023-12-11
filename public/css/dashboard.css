@@ -1,0 +1,19 @@
+body{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+aside{
+    width: 25vw;
+    height: 90vh;
+    background-color: rgb(149, 146, 146);
+}
+main{
+    width: 70vw;
+    height: 90vh;
+    background-color: rgb(149, 146, 146);
+}

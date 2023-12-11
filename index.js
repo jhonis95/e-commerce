@@ -14,8 +14,7 @@ const passport = require('passport')
 app.use(session({
     secret: "secret",
     resave: false ,
-    saveUninitialized: true ,
-    cookie: { maxAge: 6000 }
+    saveUninitialized: true 
 }))
 
 app.use(passport.initialize()) 

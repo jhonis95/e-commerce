@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../layout/head'); %>
+</head>
+<body>
+    <aside>
+        <div>
+            <img src="" alt="user-image">
+            <%if(user){%>
+                <h3>bem vindo <%= user.username%></h3>
+            <%}%>
+        </div>
+        <nav>
+            <ul>
+                <li id="dashboardBtn">Dashboard</li>
+                <li id="productBtn">Products</li>
+                <li>Orders</li>
+                <li>Statistic</li>
+                <li>Finance</li>
+            </ul>
+        </nav>
+    </aside>
+    <main>
+        <%switch(main){
+            case 'home':%>
+                <%- include('../components/dashboardHome')%>
+                <%break;
+            case 'products':%>
+                <%- include('../components/dashboardProducts')%>
+                <%break;
+            default:%>
+                <%break;
+        }%>
+    </main>
+</body>
+<script type="text/javascript" src="js/dashboard.js"></script>
+</html>
