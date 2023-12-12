@@ -13,15 +13,25 @@
         </div>
         <nav>
             <ul>
-                <li id="dashboardBtn">Dashboard</li>
-                <li id="productBtn">Products</li>
-                <li>Orders</li>
-                <li>Statistic</li>
-                <li>Finance</li>
+                <li>
+                    <button id="dashboardBtn">Dashboard</button>
+                </li>
+                <li>
+                    <button id="productBtn">Products</button>
+                </li>
+                <li>
+                    <button id="ordersBtn">Orders</button>
+                </li>
+                <li>
+                    <button id="statisticBtn">Statistic</button>
+                </li>
+                <li>
+                    <button id="financeBtn">Finance</button>
+                </li>
             </ul>
         </nav>
     </aside>
-    <main>
+    <main id="mainContainer">
         <%switch(main){
             case 'home':%>
                 <%- include('../components/dashboardHome')%>
@@ -29,10 +39,22 @@
             case 'products':%>
                 <%- include('../components/dashboardProducts')%>
                 <%break;
+            case 'orders':%>
+                <%- include('../components/dashboardOrder')%>
+                <%break;
+            case 'statistic':%>
+                <%- include('../components/dashboardStatistic')%>
+                <%break;
+            case 'finance':%>
+                <%- include('../components/dashboardFinance')%>
+                <%break;
             default:%>
                 <%break;
         }%>
     </main>
 </body>
+<script type='text/javascript'>
+    let main = '<%= main%>'
+</script>
 <script type="text/javascript" src="js/dashboard.js"></script>
 </html>

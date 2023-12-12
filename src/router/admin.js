@@ -26,4 +26,20 @@ router.use(function timeLog(req, res, next) {
     data.main='products'
     res.render('../src/views/pages/dashboard.ejs',data);
   })
+  router.get('/orders',(req,res)=>{
+    data.user=req.user
+    data.main='orders'
+    res.render('../src/views/pages/dashboard.ejs',data);
+  })
+  router.get('/statistic',(req,res)=>{
+    data.user=req.user
+    data.main='statistic'
+    res.render('../src/views/pages/dashboard.ejs',data);
+  })
+  router.get('/finance',(req,res)=>{
+    data.user=req.user
+    data.main='finance'
+    res.render('../src/views/pages/dashboard.ejs',data);
+  })
+
   module.exports = router;
