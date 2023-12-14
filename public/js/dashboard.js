@@ -4,7 +4,14 @@ const ordersBtn=document.getElementById('ordersBtn')
 const statisticBtn=document.getElementById('statisticBtn')
 const financeBtn=document.getElementById('financeBtn')
 
+const addBtn=document.getElementById('addbtn')
+const mess=document.getElementById('mess')
+
 const mainContainer=document.getElementById('mainContainer')
+
+addBtn.onclick=(evt)=>{
+    mess.style.display='block'
+}
 
 dashboardBtn.onclick=(evt)=>{
     window.location.href='http://localhost:3000/admin'

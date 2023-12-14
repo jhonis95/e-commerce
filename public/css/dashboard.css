@@ -1,6 +1,6 @@
 body{
     display: flex;
-    justify-content: space-around;
+    column-gap: 55px;
     align-items: center;
     height: 100vh;
     border: 0;
@@ -8,15 +8,38 @@ body{
     margin: 0;
 }
 aside{
-    width: 25vw;
-    height: 90vh;
+    width: 275px;
+    height: 100%;
     background-color: rgb(149, 146, 146);
 }
 main{
-    width: 70vw;
-    height: 90vh;
+    width: 1054px;
+    height: 95vh;
     background-color: rgb(149, 146, 146);
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 35px;
+    row-gap: 20px;
+    justify-content: center;
 }
 li{
     list-style-type: none;
+}
+.minicard_container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+.home_minicard_container{
+    width: 209px;
+    height: 90px;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+.home_card_container{
+    width: 395px;
+    height: 280px;
+    border: 1px solid #000;
+    border-radius: 5px;
 }
