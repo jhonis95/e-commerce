@@ -1,3 +1,6 @@
+/* como mudar cores de svg em images tags */
+/* https://dev.to/hasantezcan/how-to-colorize-svg-image-1kc8 */
+/*  */
 body{
     display: flex;
     column-gap: 55px;
@@ -11,19 +14,59 @@ aside{
     width: 275px;
     height: 100%;
     background-color: rgb(149, 146, 146);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+nav{
+    width: 100%;
+    height: 100%;
+}
+ul{
+    display: flex;
+    flex-direction: column;
+    align-items:flex-end;
+    row-gap: 30px;
 }
 main{
     width: 1054px;
     height: 95vh;
-    background-color: rgb(149, 146, 146);
     display: flex;
     flex-wrap: wrap;
     column-gap: 35px;
     row-gap: 20px;
     justify-content: center;
+    /* display: none; */
 }
 li{
     list-style-type: none;
+}
+.dashboard_userContainer{
+    width: 100%;
+    height: 249px;
+    text-align: center;
+}
+.dashboard_menuBtn{
+    font-size: var(--headings-m);
+    color: var(--text-defalt);
+    width: 268px;
+    padding: 10px 15px;
+    cursor: pointer; 
+    background-color: transparent;
+    border-style: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 14px;
+}
+.activeBtn{
+    border-top-left-radius: 80px 80px;
+    border-bottom-left-radius: 80px 80px;
+    background-color: white;
+}
+.btnIcon{
+    width: 25px;
+    height: 25px;
 }
 .minicard_container{
     display: flex;

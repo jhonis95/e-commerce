@@ -7,7 +7,8 @@ const data={
   headLinks:[
     '<link rel="stylesheet" type="text/css" href="css/dashboard.css">'
   ],
-  main:'home'
+  main:'home',
+  activeBtn:'activeBtn'
 }
 
 router.use(function timeLog(req, res, next) {

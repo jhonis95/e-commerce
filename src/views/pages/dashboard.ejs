@@ -5,33 +5,82 @@
 </head>
 <body>
     <aside>
-        <div>
+        <div class="dashboard_userContainer">
             <img src="" alt="user-image">
             <%if(user){%>
                 <h3>bem vindo <%= user.username%></h3>
             <%}%>
+            <hr>
         </div>
         <nav>
             <ul>
                 <li>
-                    <button id="dashboardBtn">Dashboard</button>
+                    <%if (main==='home'){%>
+                        <button class="dashboard_menuBtn <%= activeBtn%>" id="dashboardBtn"> 
+                            <img class="btnIcon" src="assets/chart-line-solid.svg" alt="">
+                            Dashboard
+                        </button>
+                    <%}else{%>
+                        <button class="dashboard_menuBtn" id="dashboardBtn"> 
+                            <img class="btnIcon" src="assets/chart-line-solid.svg" alt="">
+                            Dashboard
+                        </button>
+                    <%}%>
                 </li>
                 <li>
-                    <button id="productBtn">Products</button>
+                    <%if (main==='products'){%>
+                        <button class="dashboard_menuBtn <%= activeBtn%>" id="productBtn">
+                            <img class="btnIcon" src="assets/shirt-solid.svg" alt="">
+                            Products
+                        </button>
+                    <%}else{%>
+                        <button class="dashboard_menuBtn" id="productBtn">
+                            <img class="btnIcon" src="assets/shirt-solid.svg" alt="">
+                            Products
+                        </button>
+                    <%}%>
                 </li>
                 <li>
-                    <button id="ordersBtn">Orders</button>
+                    <%if (main==='orders'){%>
+                        <button class="dashboard_menuBtn <%= activeBtn%>" id="ordersBtn">
+                            <img class="btnIcon" src="assets/boxes-stacked-solid.svg" alt="">
+                            Orders
+                        </button>
+                    <%}else{%>
+                        <button class="dashboard_menuBtn" id="ordersBtn">
+                            <img class="btnIcon" src="assets/boxes-stacked-solid.svg" alt="">
+                            Orders
+                        </button>
+                    <%}%>
                 </li>
                 <li>
-                    <button id="statisticBtn">Statistic</button>
+                    <%if (main==='statistic'){%>
+                        <button class="dashboard_menuBtn <%= activeBtn%>" id="statisticBtn">
+                            <img class="btnIcon" src="assets/chart-simple-solid.svg" alt="">
+                            Statistic
+                        </button>
+                    <%}else{%>
+                        <button class="dashboard_menuBtn" id="statisticBtn">
+                            <img class="btnIcon" src="assets/chart-simple-solid.svg" alt="">
+                            Statistic
+                        </button>
+                    <%}%>
                 </li>
                 <li>
-                    <button id="financeBtn">Finance</button>
+                    <%if (main==='finance'){%>
+                        <button class="dashboard_menuBtn <%= activeBtn%>" id="financeBtn">
+                            <img class="btnIcon" src="assets/cash-register-solid.svg" alt="">
+                            Finance
+                        </button>
+                    <%}else{%>
+                        <button class="dashboard_menuBtn" id="financeBtn">
+                            <img class="btnIcon" src="assets/cash-register-solid.svg" alt="">
+                            Finance
+                        </button>
+                    <%}%>
                 </li>
             </ul>
         </nav>
-        <h1 id="mess" style="display:none;">hi messenge</h1>
-        <button id="addbtn">add</button>
     </aside>
     <main id="mainContainer">
         <%switch(main){

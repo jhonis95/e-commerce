@@ -33,4 +33,7 @@
     --title-mobile-s:var(--text-xl);/*24px*/
     --title-mobile-m:var(--headings-s);/*30px*/
     --title-mobile-l:var(--headings-m);/*36px*/
+
+    /* colors */
+    --text-defalt:#1e3050
   }
