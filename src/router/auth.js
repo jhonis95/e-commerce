@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const passport = require('passport')
 const LocalStrategy = require('passport-local');
-const authUser=require('../controller/authController')
+const authUser=require('../controller/authController')// the main strategy for makke the authentication
 
 passport.serializeUser(function(user, cb) {
   process.nextTick(function() {
@@ -42,7 +42,12 @@ router.use(function timeLog(req, res, next) {
   next();
 });
 // define the home page route
-router.get('/',(req, res)=> {
+router.get('/', (req, res)=> {
+  const db=req.app.get('db');
+  authUser(db)
+  // db.select("*")
+  //   .from("user")
+  //   .then(data => console.log(data));
   res.render('../src/views/pages/login.ejs',data);
 });
 router.post('/',passport.authenticate('local', {
