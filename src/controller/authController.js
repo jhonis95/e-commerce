@@ -12,12 +12,13 @@
 // const knex= require('../model/dbconect')
 
 function getAllUsers(knex){
-    return knex.select("*")
-      .from("user")
-      .then(data => console.log(data));
-    // return knex('user')
-    // .where({ nome: 'jonatan' })
-    // .update({ nome: 'test' })
- }
-
-module.exports=getAllUsers
+  return knex.select("*")
+    .from("user")
+    .then(data => console.log(data));
+}
+function auth(user,password,knex){
+  return knex.select('name','password')
+    .where({name:user},{password:password})
+    .then(data => console.log(data));
+}
+module.exports={getAllUsers,auth}

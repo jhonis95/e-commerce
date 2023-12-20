@@ -1,5 +1,5 @@
 const dbConfig= require('../config/dbconfg')
-require('dotenv').config()
+// require('dotenv').config()
 // const mysql = require('mysql2');
 
 // const connection = mysql.createConnection({
@@ -9,10 +9,9 @@ require('dotenv').config()
 //   password: process.env.DB_PASSWORD
 // });
 
-
-const knex = require('knex')({
+const db = require('knex')({
   client: 'mysql2',
   connection: dbConfig
 });
 
-module.exports=knex
+module.exports=db
