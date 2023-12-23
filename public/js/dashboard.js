@@ -3,6 +3,7 @@ const productBtn=document.getElementById('productBtn')
 const ordersBtn=document.getElementById('ordersBtn')
 const statisticBtn=document.getElementById('statisticBtn')
 const financeBtn=document.getElementById('financeBtn')
+// const addProductModal=document.getElementById('addProductModal')
 
 const addBtn=document.getElementById('addbtn')
 const mess=document.getElementById('mess')
@@ -36,3 +37,8 @@ switch(main){
     default:
         break;
 }
+
+//function to load the image of the uploaded photo
+// addProductModal.onload=(evt)=>{
+//     fetch('',{})
+// }

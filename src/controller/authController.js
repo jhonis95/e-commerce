@@ -17,8 +17,9 @@ function getAllUsers(knex){
     .then(data => console.log(data));
 }
 function auth(user,password,knex){
-  return knex.select('name','password')
-    .where({name:user},{password:password})
-    .then(data => console.log(data));
+  return knex.select('id','name')
+    .from('user')
+    .where({name:user,password:password})
+    .then(data =>{return data});
 }
 module.exports={getAllUsers,auth}

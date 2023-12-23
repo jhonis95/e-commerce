@@ -9,7 +9,7 @@ passport.serializeUser(function(user, cb) {
   process.nextTick(function() {
     return cb(null, {
       username: user.name,
-      test:'testando opcoes'
+      id:user.id
     });
   });
 });
@@ -19,16 +19,24 @@ passport.deserializeUser(function(user, cb) {
   });
 });
 
-passport.use(new LocalStrategy(function verify(username, password, cb) {
-  // authController.auth(username,password,db)
-  const user={
-    name:username
-  }
-  if(username=='jonatan'&&password=='1234'){
+passport.use(new LocalStrategy(async function verify(username, password, cb) {
+  try{
+    const bdData= await authController.auth(username,password,db)
+    console.log(bdData)
+    const user={
+      name:bdData.name,
+      id:bdData.id
+    }
     return cb(null, user, { message: 'É nois cachorro.' })
-  }else{
+  }catch(err){
+    console.log(err)
     return cb(null, false, { message: 'Incorrect username or password.' })
   }
+  // if(username=='jonatan'&&password=='1234'){
+  //   return cb(null, user, { message: 'É nois cachorro.' })
+  // }else{
+  //   return cb(null, false, { message: 'Incorrect username or password.' })
+  // }
   // authUser(username,password)
 }));
 
@@ -45,19 +53,11 @@ router.use(function timeLog(req, res, next) {
 });
 // define the home page route
 router.get('/', (req, res)=> {
-  const db=req.app.get('db');
-  authController.getAllUsers(db)
-  // db.select("*")
-  //   .from("user")
-  //   .then(data => console.log(data));
   res.render('../src/views/pages/login.ejs',data);
 });
+//router to process the authentication
 router.post('/',passport.authenticate('local', {
   successRedirect: "/admin",
   failureRedirect: "/login",
 }))
-// router.post('/',(req ,res)=>{
-//   const {companyID,companyPassword}=req.body
-//   // passport.use(new LocalStrategy (authUser(companyID,companyPassword)))
-// })
 module.exports = router;
