@@ -35,5 +35,6 @@
     --title-mobile-l:var(--headings-m);/*36px*/
 
     /* colors */
-    --text-defalt:#1e3050
+    --text-defalt:#1e3050;
+    --rose:#ff87c9;
   }

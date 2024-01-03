@@ -1,0 +1,98 @@
+body{
+    border: 0;
+    padding: 0;
+    margin: 0;
+    overflow: hidden; /*teste para */
+}
+nav{
+    display: flex;
+    flex-direction: column;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+ul{
+    margin: 0;
+    padding: 0;
+}
+.icons-conteiner{
+    display: flex;
+    list-style-type: none;
+    width: 20px;
+    height: 20px;
+    padding: 2px;
+    justify-content: center;
+}
+.icons-conteiner:hover{
+    cursor: pointer;
+    background-color: rgb(238, 247, 255,0.5);
+    border-radius: 50%;
+}
+nav{
+    display: flex;
+    position: sticky;
+}
+.navbar-topContainer{
+    background-color: var(--rose);
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 20px;
+    align-items: center;
+}
+.navbar-contactContainer{
+    display: flex;
+    gap: 20px;
+}
+.navbar-socialContainer{
+    display: flex;
+    gap: 5px;
+}
+.navbar-bottonContainer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#shop-name{
+    font-family: 'Urbanist';
+    margin: 0;
+    color: var(--rose);
+}
+#logo-container{
+    display: flex;
+    align-items: center;
+}
+#logo{
+    width: 49px;
+    height: 49px;
+}
+form{
+    border: solid 2px var(--text-defalt);
+    border-radius: 80px 80px;
+    padding: 3px 15px;
+    display: flex;
+    justify-content: center;
+}
+input{
+    border: none;
+}
+input:focus{
+    -webkit-appearance:none;
+    appearance: none;
+    outline:none!important;
+}
+.actionBtn{
+    border: none;
+    background: none;
+    display: flex;
+    justify-content: center;
+    padding: 7px;
+}
+#actionBtn-Container{
+    display: flex;
+    gap: 10px;
+}
+.navbarBotton-btnContainer{
+    border: solid 2px var(--text-defalt);
+    border-radius: 50%;
+}
