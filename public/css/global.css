@@ -37,4 +37,11 @@
     /* colors */
     --text-defalt:#1e3050;
     --rose:#ff87c9;
+    --rose-light:#ffd7ec;
   }
+p{
+  margin: 0;
+}
+h1,h2,h3,h4,h5,h5{
+  margin: 0;
+}

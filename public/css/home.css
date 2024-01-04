@@ -2,7 +2,7 @@ body{
     border: 0;
     padding: 0;
     margin: 0;
-    overflow: hidden; /*teste para */
+    /* overflow: hidden; teste para */
 }
 nav{
     display: flex;
@@ -86,6 +86,7 @@ input:focus{
     background: none;
     display: flex;
     justify-content: center;
+    align-items: center;
     padding: 7px;
 }
 #actionBtn-Container{
@@ -95,4 +96,65 @@ input:focus{
 .navbarBotton-btnContainer{
     border: solid 2px var(--text-defalt);
     border-radius: 50%;
+}
+
+/* ####################################### */
+
+header{
+    width: 100%;
+    height: 55vh;
+    background-color: aqua;
+    position: relative;
+}
+.header-navBtn-container{
+    position: absolute;
+    height: 100%;
+    z-index: 10;
+}
+.header-navBtn-container:hover{
+    cursor: pointer;
+}
+.header-navBtn{
+    width: 25px;
+    height: 25px;
+}
+#header-navBtn-left{
+    left: 0;
+}
+#header-navBtn-right{
+    right: 0;
+}
+#features-container{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 30px;
+}
+.features-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 449px;
+    height: 129px;
+    gap: 16px;
+    transition: transform .2s; /* Animation */
+    border-radius: 5px;
+}
+.features-card:hover{
+    background-color: var(--rose-light);
+    cursor: pointer;
+    transform: scale(1.1)
+}
+.card-icon{
+    width: 60px;
+    height: 60px;
+}
+.title-text-container{
+    display: flex;
+    justify-content: center;
+}
+.title-text{
+    padding: 10px;
+    color: var(--rose);
+    border-bottom: var(--rose-light) 2px solid;
 }

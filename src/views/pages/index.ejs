@@ -6,11 +6,36 @@
 <body>
     <%- include('../layout/navBar'); %>
     <main>
-        
+        <header>
+            <button class="header-navBtn-container actionBtn" id="header-navBtn-left">
+                <img class="header-navBtn" src="assets/angle-left.svg" alt="toLeft-icon">                
+            </button>
+            <button class="header-navBtn-container actionBtn" id="header-navBtn-right">
+                <img class="header-navBtn" src="assets/angle-right.svg" alt="toRight-icon">
+            </button>
+        </header>
+        <section id="features-container">
+            <div class="features-card">
+                <img class="card-icon" src="assets/comments-dollar.svg" alt="payment-icon">
+                <h4>PAGO CONTRA-ENTREGA</h4>
+                <p>Pagas Cuando Recibis</p>
+            </div>
+            <div class="features-card">
+                <img class="card-icon" src="assets/truck-fast.svg" alt="ship-icon">
+                <h4>ENVIOS A TODO EL PAIS</h4>
+                <p>Delivery Y Envios A Todo El Pais</p>
+            </div>
+            <div class="features-card">
+                <img class="card-icon" src="assets/right-left.svg" alt="exchange-icon">
+                <h4>CAMBIA EN LA TIENDA</h4>
+                <p>Hasta 7 Dias Para Cambiar Con La Factura</p>
+            </div>
+        </section>
+        <div class="title-text-container">
+            <h2 class="title-text">Ultimas Novedades</h2>
+            <!-- <hr> -->
+        </div>
     </main>
-    <header>
-    </header>
-    <main></main>
     <footer></footer>
 </body>
 </html>
