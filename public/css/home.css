@@ -167,3 +167,26 @@ header{
     color: var(--rose);
     border-bottom: var(--rose-light) 2px solid;
 }
+.cards-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+    justify-content: center;
+    margin-top: 20px;
+}
+.clothes-card{
+    width: 320px;
+    height: 488px;
+    border: black 2px solid;
+}
+.newsCard-container{
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    margin: 60px 0;
+}
+.newsCard{
+    width: 614px;
+    height: 409px;
+    border: black 2px solid;
+}
