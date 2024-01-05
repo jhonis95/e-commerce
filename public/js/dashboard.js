@@ -11,7 +11,6 @@ const mess=document.getElementById('mess')
 const mainContainer=document.getElementById('mainContainer')
 
 dashboardBtn.onclick=(evt)=>{
-    console.log('dashboard')
     window.location.href='http://localhost:3000/admin'
 }
 productBtn.onclick=(evt)=>{

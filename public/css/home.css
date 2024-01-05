@@ -89,6 +89,9 @@ input:focus{
     align-items: center;
     padding: 7px;
 }
+.actionBtn:hover{
+    cursor: pointer;
+}
 #actionBtn-Container{
     display: flex;
     gap: 10px;
@@ -105,6 +108,12 @@ header{
     height: 55vh;
     background-color: aqua;
     position: relative;
+}
+#header-background-image{
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    transition:all 0.5s linear;
 }
 .header-navBtn-container{
     position: absolute;
@@ -142,8 +151,8 @@ header{
 }
 .features-card:hover{
     background-color: var(--rose-light);
+    transform: scale(1.1);
     cursor: pointer;
-    transform: scale(1.1)
 }
 .card-icon{
     width: 60px;

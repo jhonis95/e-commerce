@@ -7,6 +7,7 @@
     <%- include('../layout/navBar'); %>
     <main>
         <header>
+            <img id="header-background-image" src="" alt="">
             <button class="header-navBtn-container actionBtn" id="header-navBtn-left">
                 <img class="header-navBtn" src="assets/angle-left.svg" alt="toLeft-icon">                
             </button>
@@ -33,9 +34,13 @@
         </section>
         <div class="title-text-container">
             <h2 class="title-text">Ultimas Novedades</h2>
-            <!-- <hr> -->
         </div>
     </main>
-    <footer></footer>
+    <footer>
+    </footer>
 </body>
+<script type='text/javascript'>
+    let images = '<%- JSON.stringify(images)%>'
+</script>
+<script type="text/javascript" src="js/site.js"></script>
 </html>
