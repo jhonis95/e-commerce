@@ -30,6 +30,11 @@ const data={
         back3.toString('base64')
       ]
     }
+  },
+  cards:{
+    clothes:[
+      'test','test1'
+    ]
   }
 }
 // middleware that is specific to this router
@@ -48,18 +53,18 @@ router.use(function timeLog(req, res, next) {
     });
 
   // Reading the file
-  fs.readFile('./src/storage/site/back1.jpg',(err,data)=>{
-    if (err) throw err;
-    console.log('sended image')
-  }),
-  fs.readFile('./src/storage/site/back2.jpg',(err,data)=>{
-    if (err) throw err;
-    console.log('sended image')
-  }),
-  fs.readFile('./src/storage/site/back3.jpg',(err,data)=>{
-    if (err) throw err;
-    console.log('sended image')
-  })
+  // fs.readFile('./src/storage/site/back1.jpg',(err,data)=>{
+  //   if (err) throw err;
+  //   console.log('sended image')
+  // }),
+  // fs.readFile('./src/storage/site/back2.jpg',(err,data)=>{
+  //   if (err) throw err;
+  //   console.log('sended image')
+  // }),
+  // fs.readFile('./src/storage/site/back3.jpg',(err,data)=>{
+  //   if (err) throw err;
+  //   console.log('sended image')
+  // })
 })
   
   module.exports = router;
